@@ -24,7 +24,8 @@ const Working = () => {
                         
                             <div className='flex items-center gap-4'>
                             <div className='p-3 bg-bright-sun-300 rounded-full'>
-                                <img src="/Category/Web Developer.png" className='h-12 w-12' alt="" />
+                                <img src={`${process.env.PUBLIC_URL}/Category/Web Developer.png`} className='h-12 w-12' alt="" />
+                                
                             </div>
                             <div className=''>
                                 <div className='text-mine-shaft-200 text-xl font-semibold'>{item.title}</div>

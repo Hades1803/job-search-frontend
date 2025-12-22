@@ -13,7 +13,7 @@ const JobDesc = (props:any) => {
         <div className='w-2/3 mt-5'>
             <div className='flex justify-between'>
                 <div className='flex gap-2 items-center'>
-                    <div className='p-3 bg-mine-shaft-800 rounded-xl'><img src="/Companies/Amazon.png" alt="" className='h-14 w-14' /></div>
+                    <div className='p-3 bg-mine-shaft-800 rounded-xl'><img src={`${process.env.PUBLIC_URL}/Companies/Amazon.png"`} alt="" className='h-14 w-14' /></div>
                     <div>
                         <div className='font-semibold text-2xl'>Devops Engineer</div>
                         <div className='text-lg text-mine-shaft-300'> Google &#x2022; 3 days ago &#x2022; 100 applicant</div>
@@ -61,7 +61,7 @@ const JobDesc = (props:any) => {
                 <div>
                     <div className='flex justify-between mb-3'>
                         <div className='flex gap-2 items-center'>
-                            <div className='p-3 bg-mine-shaft-800 rounded-xl'><img src="/Companies/Amazon.png" alt="" className='h-8 w-8' /></div>
+                            <div className='p-3 bg-mine-shaft-800 rounded-xl'><img src={`${process.env.PUBLIC_URL}/Companies/Amazon.png"`} alt="" className='h-8 w-8' /></div>
                             <div className='flex flex-col'>
                                 <div className='font-medium text-lg'>Google</div>
                                 <div className='text-lg text-mine-shaft-300'>10k+ Employees</div>

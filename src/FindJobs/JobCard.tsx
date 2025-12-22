@@ -8,7 +8,7 @@ const JobCard = (props:any) => {
     <Link to='/jobs' className='bg-mine-shaft-900 p-4 w-72 flex flex-col gap-3 rounded-xl hover:shadow-[0_0_5px_1px_yellow] !shadow-bright-sun-400'>
         <div className='flex justify-between'>
             <div className='flex gap-2 items-center'>
-                <div className='p-2 bg-mine-shaft-800 rounded-md'><img src="/Companies/Amazon.png" alt="" className='h-7 w-7'/></div>
+                <div className='p-2 bg-mine-shaft-800 rounded-md'><img src={`${process.env.PUBLIC_URL}/Companies/Amazon.png"`} alt="" className='h-7 w-7'/></div>
                 <div>
                     <div className='font-semibold'>{props.jobTitle}</div>
                     <div className='text-xs text-mine-shaft-50'>{props.company} &#x2022; {props.applicants} applicant</div>

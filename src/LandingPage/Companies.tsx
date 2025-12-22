@@ -10,7 +10,7 @@ const Companies = () => {
             {
                 companies.map((company,index)=>
                     <div key={index} className='mx-8 px-2 py-1 hover:bg-mine-shaft-900 rounded-xl cursor-pointer'>
-                        <img className='h-14' src={`/Companies/${company}.png`} alt={company} />
+                        <img className='h-14' src={`${process.env.PUBLIC_URL}/Companies/${company}.png`} alt={company} />
                     </div>
                 )
             }

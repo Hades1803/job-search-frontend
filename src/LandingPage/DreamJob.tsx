@@ -29,7 +29,7 @@ const DreamJob = () => {
             </div>
             <div className='w-[55%] flex items-center justify-center'>
                 <div className='w-[30rem] relative'>
-                    <img src="/Boy.png" alt="" />
+                    <img src={`${process.env.PUBLIC_URL}/Boy.png`} alt="" />
                     <div className='absolute w-fit top-[50%] -right-10 border-bright-sun-400 border rounded-lg p-2 backdrop-blur-md'>
                         <div className='text-center mb-1 text-sm text-mine-shaft-100'>10k+ got job</div>
                         <Avatar.Group>
@@ -41,7 +41,7 @@ const DreamJob = () => {
                     </div>
                     <div className='absolute -left-10 top-[28%]  border-bright-sun-400 border rounded-lg p-2 backdrop-blur-md flex flex-col gap-3'>
                         <div className='flex gap-2 items-center'>
-                            <div className='w-12 h-12 p-1 bg-mine-shaft-900 rounded-lg'><img src="Google.png" alt="" /></div>
+                            <div className='w-12 h-12 p-1 bg-mine-shaft-900 rounded-lg'><img src={`${process.env.PUBLIC_URL}/Google.png`} alt="" /></div>
                             <div className='text-sm text-mine-shaft-100'>
                                 <div>Devops Engineer</div>
                                 <div className='text-mine-shaft-200 text-xs'>Thành Phố Hồ Chí Minh</div>
