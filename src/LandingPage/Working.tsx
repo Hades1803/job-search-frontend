@@ -11,7 +11,7 @@ const Working = () => {
             <div className="text-lg mx-auto text-mine-shaft-300 text-center w-1/2">Effortlessly navigate through the process and land your dream job.</div>
             <div className='flex gap-5 px-16 justify-around items-center mt-8'>
                 <div className='relative'>
-                    <img className='w-[30rem]' src="/Working/Girl.png" alt="" />
+                    <img className='w-[30rem]' src={`${process.env.PUBLIC_URL}/Working/Girl.png`} alt="" />
                     <div className='w-36 top-[15%] right-0 absolute flex flex-col items-center gap-1 border border-bright-sun-400 rounded-xl py-3 px-1 backdrop-blur-md'>
                         <Avatar src="avatar1.png" alt='avatar' className='!h-16 !w-16'/>
                         <div className='text-sm font-semibold text-mine-shaft-200 text-center'>Complete your profile</div>

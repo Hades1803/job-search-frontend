@@ -33,9 +33,9 @@ const DreamJob = () => {
                     <div className='absolute w-fit top-[50%] -right-10 border-bright-sun-400 border rounded-lg p-2 backdrop-blur-md'>
                         <div className='text-center mb-1 text-sm text-mine-shaft-100'>10k+ got job</div>
                         <Avatar.Group>
-                            <Avatar src="avatar.png" />
-                            <Avatar src="avatar.png" />
-                            <Avatar src="avatar.png" />
+                            <Avatar src={`${process.env.PUBLIC_URL}/avatar.png`} />
+                            <Avatar src={`${process.env.PUBLIC_URL}/avatar.png`} />
+                            <Avatar src={`${process.env.PUBLIC_URL}/avatar.png`}/>
                             <Avatar>+9k</Avatar>
                         </Avatar.Group>
                     </div>
