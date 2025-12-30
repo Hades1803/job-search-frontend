@@ -16,7 +16,7 @@ const Header = () => {
                     Job Finder
                 </div>
             </div>
-            {NavLinks()}
+            <NavLinks />
             <div className="flex gap-5 items-center">
                 <ProfileMenu/>
                 <div className="bg-mine-shaft-900 p-1 rounded-full">
