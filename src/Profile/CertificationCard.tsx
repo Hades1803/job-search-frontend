@@ -6,7 +6,7 @@ const CertificationCard = (props: any) => {
     return (
         <div className='flex justify-between'>
             <div className='flex gap-2 items-center'>
-                <div className='p-2 bg-mine-shaft-800 rounded-md'><img src={`${process.env.PUBLIC_URL}/Companies/Google.png"`} alt="" className='h-7 w-7' /></div>
+                <div className='p-2 bg-mine-shaft-800 rounded-md'><img src={`${process.env.PUBLIC_URL}/Companies/Google.png`} alt="" className='h-7 w-7' /></div>
                 <div className='flex flex-col'>
                     <div className='font-semibold text-bright-sun-400'>{props.title}</div>
                     <div className='text-sm text-mine-shaft-300'>{props.issuer}</div>

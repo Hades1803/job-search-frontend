@@ -24,8 +24,9 @@ const Profile = (props: any) => {
     return (
         <div className='w-4/5 mt-14 mx-auto'>
             <div className='relative'>
-                <img src={`${process.env.PUBLIC_URL}/Profile/banner.jpg"`} alt="" className='rounded-t-2xl w-full h-64' />
-                <img src={`${process.env.PUBLIC_URL}/avatar.png"`} alt="" className='rounded-full w-48 h-48 -bottom-1/3 absolute left-3 border-mine-shaft-950 border-8' />
+                <img src={`${process.env.PUBLIC_URL}/Profile/banner.jpg`} alt="" className='rounded-t-2xl w-full h-64' />
+                <img src={`${process.env.PUBLIC_URL}/avatar.png`} alt="" className='rounded-full w-48 h-48 -bottom-1/3 absolute left-3 border-mine-shaft-950 border-8' />
+                
             </div>
             <div className="px-3 mt-24">
                 <div className='text-3xl font-semibold flex justify-between'>{props.name}

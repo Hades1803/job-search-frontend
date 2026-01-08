@@ -9,7 +9,7 @@ const ExpCard = (props: any) => {
         <div className='flex flex-col gap-2'>
             <div className='flex justify-between'>
                 <div className='flex gap-2 items-center'>
-                    <div className='p-2 bg-mine-shaft-800 rounded-md'><img src={`${process.env.PUBLIC_URL}/Companies/Google.png"`} alt="" className='h-7 w-7' /></div>
+                    <div className='p-2 bg-mine-shaft-800 rounded-md'><img src={`${process.env.PUBLIC_URL}/Companies/Google.png`} alt="" className='h-7 w-7' /></div>
                     <div className='flex flex-col'>
                         <div className='font-semibold text-bright-sun-400'>{props.title}</div>
                         <div className='text-xs text-mine-shaft-50'>{props.company} &bull; {props.location}</div>

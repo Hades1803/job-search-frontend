@@ -25,6 +25,7 @@ import { AuthProvider } from './Context/AuthContext';
 import ForgotPasswordPage from './Pages/ForgotPasswordPage';
 import ResetPasswordPage from './Pages/ResetPasswordPage';
 import { useEffect, useState } from 'react';
+import VerifyOtpPage from './Pages/VerifyOtpPage';
 
 // Component để kiểm soát hiển thị Header/Footer
 const Layout = () => {
@@ -32,8 +33,8 @@ const Layout = () => {
   const [showHeaderFooter, setShowHeaderFooter] = useState(true);
 
   useEffect(() => {
-    // Danh sách các route KHÔNG hiển thị Header/Footer
-    const authRoutes = ['/signup', '/login', '/forgot-password', '/reset-password'];
+    
+    const authRoutes = ['/signup', '/login', '/forgot-password', '/reset-password','/verify-otp'];
     setShowHeaderFooter(!authRoutes.includes(location.pathname));
   }, [location]);
 
@@ -43,6 +44,7 @@ const Layout = () => {
       {showHeaderFooter && <Divider size="xs" mx="md" />}
       
       <Routes>
+        <Route path="/verify-otp" element={<VerifyOtpPage />} />
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         <Route path="/reset-password" element={<ResetPasswordPage />} />
         <Route path="/signup" element={<SignUpPage />} />

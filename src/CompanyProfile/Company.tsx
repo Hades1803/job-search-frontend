@@ -8,8 +8,8 @@ const Company = () => {
     return (
         <div className='w-3/4'>
             <div className='relative'>
-                <img src={`${process.env.PUBLIC_URL}/Profile/banner.jpg"`} alt="" className='rounded-t-2xl h-64 w-full' />
-                <img src={`${process.env.PUBLIC_URL}/Companies/Amazon.png"`} alt="" className='rounded-3xl w-48 h-48 -bottom-1/4 absolute left-5 border-mine-shaft-950 border-8 bg-mine-shaft-950' />
+                <img src={`${process.env.PUBLIC_URL}/Profile/banner.jpg`} alt="" className='rounded-t-2xl h-64 w-full' />
+                <img src={`${process.env.PUBLIC_URL}/Companies/Amazon.png`} alt="" className='rounded-3xl w-48 h-48 -bottom-1/4 absolute left-5 border-mine-shaft-950 border-8 bg-mine-shaft-950' />
             </div>
             <div className="px-3 mt-20">
                 <div className='text-3xl font-semibold flex justify-between'>

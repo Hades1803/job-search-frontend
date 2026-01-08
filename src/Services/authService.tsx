@@ -2,14 +2,11 @@ import axios from 'axios'
 
 const API_URL = 'http://localhost:8081'
 
-/* ================= LOGIN ================= */
-
 export interface LoginRequest {
   email: string
   password: string
 }
 
-// nếu backend bạn trả AuthResponse thì có thể mở rộng sau
 export interface LoginResponse {
   accessToken: string
   email: string
@@ -18,16 +15,20 @@ export interface LoginResponse {
 }
 
 const login = async (data: LoginRequest): Promise<LoginResponse> => {
-  const res = await axios.post(
-    `${API_URL}/api/auth/login`,
-    data,
-    {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }
-  )
+  const res = await axios.post(`${API_URL}/api/auth/login`, data)
+  return res.data
+}
 
+/* ================= VERIFY OTP ================= */
+
+export interface VerifyOtpRequest {
+  otp: number
+}
+
+const verifyOtp = async (data: VerifyOtpRequest): Promise<{ otp: number; message: string }> => {
+  const res = await axios.post(`${API_URL}/api/auth/verify-otp`, data, {
+    headers: { 'Content-Type': 'application/json' }
+  })
   return res.data
 }
 
@@ -37,52 +38,34 @@ export interface ForgotPasswordRequest {
   email: string
 }
 
-const forgotPassword = async (
-  data: ForgotPasswordRequest
-): Promise<string> => {
-  const res = await axios.post(
-    `${API_URL}/api/auth/forgot-password`,
-    data,
-    {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }
-  )
-
-  // backend thường trả message
+const forgotPassword = async (data: ForgotPasswordRequest): Promise<string> => {
+  const res = await axios.post(`${API_URL}/api/auth/forgot-password`, data, {
+    headers: { 'Content-Type': 'application/json' }
+  })
   return res.data
 }
 
 /* ================= RESET PASSWORD ================= */
 
 export interface ResetPasswordRequest {
-  otp: string
+  otp: number
   newPassword: string
 }
 
-const resetPassword = async (
-  data: ResetPasswordRequest
-): Promise<string> => {
-  const res = await axios.post(
-    `${API_URL}/api/auth/reset-password`,
-    data,
-    {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }
-  )
-
+const resetPassword = async (data: ResetPasswordRequest): Promise<string> => {
+  const res = await axios.post(`${API_URL}/api/auth/reset-password`, data, {
+    headers: { 'Content-Type': 'application/json' }
+  })
   return res.data
 }
 
 /* ================= EXPORT ================= */
 
 const AuthService = {
-  login,
   forgotPassword,
-  resetPassword
+  verifyOtp,
+  resetPassword,
+  login
 }
 
 export default AuthService

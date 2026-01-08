@@ -4,6 +4,7 @@ import { IconAt, IconLock } from '@tabler/icons-react'
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../Context/AuthContext'
+import { toast } from 'react-toastify'
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('')
@@ -17,9 +18,10 @@ const Login: React.FC = () => {
     try {
       setLoading(true)
       await login(email, password)
+      toast.success('Login successful!')
       navigate('/')
     } catch (error: any) {
-      alert(error.response?.data?.message || 'Login failed')
+      toast.error(error.response?.data?.message || 'Login failed')
     } finally {
       setLoading(false)
     }
