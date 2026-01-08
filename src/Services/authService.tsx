@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = 'http://localhost:8081'
+const API_URL = 'https://job-search-backend-bcgv.onrender.com'
 
 export interface LoginRequest {
   email: string
