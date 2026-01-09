@@ -58,7 +58,7 @@ const SignUp: React.FC = () => {
     try {
       setLoading(true)
 
-      await axios.post('http://localhost:8081/api/auth/register', {
+      await axios.post('https://job-search-backend-bcgv.onrender.com/api/auth/register', {
         email,
         password,
         roleId
