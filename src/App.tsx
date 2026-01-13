@@ -26,6 +26,8 @@ import ForgotPasswordPage from './Pages/ForgotPasswordPage';
 import ResetPasswordPage from './Pages/ResetPasswordPage';
 import { useEffect, useState } from 'react';
 import VerifyOtpPage from './Pages/VerifyOtpPage';
+import EmployerPage from './Pages/ProfilePage';
+import CandidateProfilePage from './Pages/CandidateProfilePage';
 
 // Component để kiểm soát hiển thị Header/Footer
 const Layout = () => {
@@ -57,7 +59,8 @@ const Layout = () => {
         <Route path="/post-job" element={<PostJobPage />} />
         <Route path="/posted-job" element={<PostedJobPage />} />
         <Route path="/job-history" element={<JobHistoryPage />} />
-        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/candidate/profile" element={<CandidateProfilePage />} />
+        <Route path="/employer/profile" element={<EmployerPage />} />
         <Route path="/talent-profile" element={<TalentProfilePage />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
