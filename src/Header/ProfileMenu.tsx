@@ -17,7 +17,7 @@
     const [checked, setChecked] = useState(false)
     const [opened, setOpened] = useState(false)
 
-    // 👉 CHƯA LOGIN → KHÔNG HIỂN THỊ GÌ
+    
     if (!isAuthenticated) return null
 
     return (
@@ -47,7 +47,11 @@
               Resume
             </Menu.Item>
           </Link>
-
+          <Link to="/job-history">
+                <Menu.Item leftSection={<IconFileText size={14} />}>
+                  Job History
+                </Menu.Item>
+              </Link>
           <Menu.Item
             leftSection={<IconMoon size={14} />}
             rightSection={

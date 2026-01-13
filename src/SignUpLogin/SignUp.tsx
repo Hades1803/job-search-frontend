@@ -17,11 +17,6 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 
-/**
- * Role:
- * 102 = Candidate
- * 103 = Employer
- */
 type RoleId = '102' | '103'
 
 const SignUp: React.FC = () => {
