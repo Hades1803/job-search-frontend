@@ -9,18 +9,11 @@ import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import FindJobs from './Pages/FindJobs';
 import Header from './Header/Header';
 import { Footer } from './Footer/Footer';
-import FindTalents from './Pages/FindTalents';
-import TalentProfilePage from './Pages/TalentProfilePage';
 import PostJobPage from './Pages/PostJobPage';
 import '@mantine/tiptap/styles.css';
-import JobDescPage from './Pages/JobDescPage';
 import ApplyJobPage from './Pages/ApplyJobPage';
-import CompanyPage from './Pages/CompanyPage';
 import '@mantine/dates/styles.css';
-import PostedJobPage from './Pages/PostedJobPage';
-import JobHistoryPage from './Pages/JobHistoryPage';
 import SignUpPage from './Pages/SignUpPage';
-import ProfilePage from './Pages/ProfilePage';
 import { AuthProvider } from './Context/AuthContext';
 import ForgotPasswordPage from './Pages/ForgotPasswordPage';
 import ResetPasswordPage from './Pages/ResetPasswordPage';
@@ -28,6 +21,10 @@ import { useEffect, useState } from 'react';
 import VerifyOtpPage from './Pages/VerifyOtpPage';
 import EmployerPage from './Pages/ProfilePage';
 import CandidateProfilePage from './Pages/CandidateProfilePage';
+import ResumePage from './Pages/ResumePage';
+import FindJobPage from './Pages/FindJobs';
+import JobDetailPage from './Pages/JobDetailPage';
+import JobHistoryPage from './Pages/JobHistoryPage';
 
 // Component để kiểm soát hiển thị Header/Footer
 const Layout = () => {
@@ -50,21 +47,18 @@ const Layout = () => {
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         <Route path="/reset-password" element={<ResetPasswordPage />} />
         <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/job-history" element={<JobHistoryPage />} />
         <Route path="/login" element={<SignUpPage />} />
         <Route path="/find-jobs" element={<FindJobs />} />
-        <Route path="/find-talents" element={<FindTalents />} />
-        <Route path="/jobs" element={<JobDescPage />} />
-        <Route path="/company" element={<CompanyPage />} />
+        <Route path="/jobs" element={<FindJobPage />} />
+        <Route path="/jobs/:id" element={<JobDetailPage />} />
         <Route path="/apply-job" element={<ApplyJobPage />} />
         <Route path="/post-job" element={<PostJobPage />} />
-        <Route path="/posted-job" element={<PostedJobPage />} />
-        <Route path="/job-history" element={<JobHistoryPage />} />
+        <Route path="/resume" element={<ResumePage />} />
         <Route path="/candidate/profile" element={<CandidateProfilePage />} />
         <Route path="/employer/profile" element={<EmployerPage />} />
-        <Route path="/talent-profile" element={<TalentProfilePage />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
-
       {showHeaderFooter && <Divider size="xs" mx="md" />}
       {showHeaderFooter && <Footer />}
     </div>

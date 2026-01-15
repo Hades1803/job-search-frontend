@@ -13,7 +13,7 @@ export interface JobRequest {
   candidateRequirement: string;
   relatedSkills: string;
   benefits: string;
-  expirationDate: string; // ISO 8601
+  expirationDate: string; 
   note?: string;
   majorId: string;
   jobTypeId: string;

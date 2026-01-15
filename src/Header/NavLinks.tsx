@@ -6,9 +6,9 @@ const NavLinks: React.FC = () => {
   const location = useLocation()
 
   const links = [
-    { name: 'Find Jobs', url: 'find-jobs', roles: ['CANDIDATE', 'EMPLOYER', 'GUEST'] },
-    { name: 'Find Talent', url: 'find-talents', roles: ['EMPLOYER'] },
-    { name: 'Post Job', url: 'post-job', roles: ['EMPLOYER'] },
+    { name: 'Tìm Việc Làm', url: 'find-jobs', roles: ['CANDIDATE', 'EMPLOYER', 'GUEST'] },
+    { name: 'Tìm Ứng Viên', url: 'find-talents', roles: ['EMPLOYER'] },
+    { name: 'Đăng Tin Tuyển Dụng', url: 'post-job', roles: ['EMPLOYER'] },
     { name: 'Posted Job', url: 'posted-job', roles: ['EMPLOYER'] },
   ]
 

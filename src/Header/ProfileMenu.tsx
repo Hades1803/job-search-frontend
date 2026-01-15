@@ -4,8 +4,6 @@ import {
   IconUserCircle,
   IconFileText,
   IconMoon,
-  IconSun,
-  IconMoonStars,
   IconLogout2,
 } from '@tabler/icons-react'
 import { useState } from 'react'
@@ -45,12 +43,6 @@ const ProfileMenu: React.FC = () => {
         {/* Menu riêng cho CANDIDATE */}
         {user.role === 'CANDIDATE' && (
           <>
-            <Link to="/messages">
-              <Menu.Item leftSection={<IconMessageCircle size={14} />}>
-                Messages
-              </Menu.Item>
-            </Link>
-
             <Link to="/resume">
               <Menu.Item leftSection={<IconFileText size={14} />}>
                 Resume
